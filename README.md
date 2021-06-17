@@ -1,4 +1,4 @@
-<h3> Projeto de Banco de Dados em Java</h3>
+<h2> Projeto de Banco de Dados em Java</h2>
 
 <h4> O objetivo do projeto , o qual é um projeto universitário , é gerenciar os dados de alunos e utilizar comandos básicos de SQL tais como : <h4>
 <ul>
