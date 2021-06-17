@@ -16,49 +16,51 @@ public class ReadView implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+    	
     	janela = new JFrame();
         painel = new JPanel();
         list = new JLabel("Listagem de Alunos");
-        painel.add(list);
-        painel.setBorder(BorderFactory.createEmptyBorder(30, 30, 10,30));
-        painel.setLayout(new GridLayout(0,1));
-        janela.add(painel, BorderLayout.CENTER);
+        painel.setLayout(new GridBagLayout());
         janela.setTitle("Tela de Listagem");
-        janela.setSize(600,350);
+        janela.setSize(400,350);
         janela.setLocation(300, 320);
         janela.setVisible(true);
-        
-       
+        GridBagConstraints c = new GridBagConstraints();
+        c.insets = new Insets (10,10,10,10);
+        c.gridx = 0;
+        c.gridy = 1;
+        painel.add(list,c);
+        c.gridx=0;
+        c.gridy=2;
         btn1 = new JButton("Revelar");
         btn1.setBounds(20,30,50,30);
-        painel.add(btn1);
-        
+        painel.add(btn1,c);
+        c.gridx=0;
+        c.gridy=3;
+        janela.add(painel);
         btn1.addActionListener(new ActionListener() {
             @Override public void actionPerformed(ActionEvent e) {
             	AlunoView leitura = new AlunoView();
         		
         		List<Aluno> listaAlunos = new ArrayList<Aluno>();
         		listaAlunos = leitura.read();
-        		
+        		int x=3;
         		for(Aluno aluno:listaAlunos) 
         		{
-        			
+        			c.gridx=0;
+        			c.gridy=x;
+        			x++;
         			painel.remove(btn1);
         			System.out.println(listaAlunos);
         			System.out.println(aluno.getNome());
         			jt = new JLabel(" ");
         			jt.setText("Matricula : "+aluno.getMatricula()+" Nome : "+aluno.getNome()+" Cidade : "+aluno.getCidade());
-        			painel.add(jt);
+        			painel.add(jt,c);
         			painel.revalidate();
         			painel.repaint();
         		}
               }
             });
-
-        
-        
-			//System.out.println("Nome :"+aluno.getNome()+" Cidade :"+aluno.getCidade());
-		//}
     }   
 
 }
