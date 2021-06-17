@@ -46,7 +46,6 @@ public class CreateView implements ActionListener {
             });
         painel.add(btnCr);
         painel.add(resultado);
-
         janela.add(painel, BorderLayout.CENTER);
         janela.setTitle("Tela de Cadastro");
         janela.setSize(300,300);
