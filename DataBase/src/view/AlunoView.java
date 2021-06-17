@@ -29,7 +29,7 @@ public class AlunoView implements ActionListener {
 
 	public AlunoView(JTextField txtnum1 , JLabel resultado) {
 		// TODO Auto-generated constructor stub
-		this.matricula = txtnum1.getText();
+		this.matricula = txtnum1.getText().trim();
 		this.resultado = resultado;
 		delete();
 	}
