@@ -41,7 +41,6 @@ public class ReadView implements ActionListener {
         btn1.addActionListener(new ActionListener() {
             @Override public void actionPerformed(ActionEvent e) {
             	AlunoView leitura = new AlunoView();
-        		
         		List<Aluno> listaAlunos = new ArrayList<Aluno>();
         		listaAlunos = leitura.read();
         		int x=3;
