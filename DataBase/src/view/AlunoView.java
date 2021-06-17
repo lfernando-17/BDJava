@@ -17,9 +17,9 @@ public class AlunoView implements ActionListener {
 	private String cidade;
 	
 	public AlunoView(JTextField txtnum1, JTextField txtnum2, JTextField txtnum3,JLabel resultado,int op) {
-		this.matricula=txtnum1.getText();
-		this.nome=txtnum2.getText();
-		this.cidade=txtnum3.getText();
+		this.matricula=txtnum1.getText().trim();
+		this.nome=txtnum2.getText().trim();
+		this.cidade=txtnum3.getText().trim();
 		this.resultado=resultado;
 		if(op==1)
 			create();
