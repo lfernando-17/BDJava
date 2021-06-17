@@ -38,7 +38,7 @@ public class CreateView implements ActionListener {
         painel.add(txtnum3);
         resultado = new JLabel(" ");
         
-        btnCr = new JButton("Atualizar");
+        btnCr = new JButton("Enviar");
         btnCr.addActionListener(new ActionListener() {
             @Override public void actionPerformed(ActionEvent e) {
             	new AlunoView(txtnum1,txtnum2,txtnum3,resultado,1);
